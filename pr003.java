@@ -30,10 +30,17 @@ class Pr003 {
 			}	
 		
 		//Обработка событий класса ArithmeticException
+		/*
 			catch(ArithmeticException exc2) {
 				System.out.println("Исключительная ситуация: неверная арифметическая ситуация");
 			}
 			System.out.println("После оператора catch");
+		}
+		*/
+		//Использование класса Throwable для обработки всех видов исключений
+			catch (Throwable exc) {
+				System.out.println("Исключение, для которогоне написан специфический обработчик");
+			}
 		}
 	}
 }
