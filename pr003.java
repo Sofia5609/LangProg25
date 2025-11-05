@@ -1,0 +1,39 @@
+class ExcTest {
+	//Генерация исключительной ситуации
+	static void genException() {
+		int nums[] = new int[4];
+		System.out.println("До исключительной ситуации");
+		nums[8] = 10;
+		System.out.println("Строка после исключительной ситуации внутри блока try");
+	}
+}
+class Pr003 {
+	public static void main(String args[]) {
+		int nums[] = new int[4];
+		//Блок, в котором может возникнуть исключительная ситуация
+		//
+		int number[] = {4, 8, 16, 32, 64, 128, 256, 512};
+		int denom[] = {2, 0, 4, 4, 0, 8};
+		for (int i=0; i<number.length; i++) {
+			try {
+				//Генерация исключительной ситуации при вызове статического метода
+				//ExcTest.genException(); 
+				System.out.println(number[i] + " / " + denom[i] + " равно " + number[i]/denom[i]);
+			}
+
+		//exc - переменная, содержащая ссылку на обьъект исключения
+		//ArrayIndexOutOfBoundsException - класс исключительной ситуации
+		//catch {...} = блок перехвата исключения
+		
+			catch(ArrayIndexOutOfBoundsException exc) {
+		       		System.out.println("Исключительная ситуация: выход за границы массива");
+			}	
+		
+		//Обработка событий класса ArithmeticException
+			catch(ArithmeticException exc2) {
+				System.out.println("Исключительная ситуация: неверная арифметическая ситуация");
+			}
+			System.out.println("После оператора catch");
+		}
+	}
+}
