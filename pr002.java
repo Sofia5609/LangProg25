@@ -83,7 +83,7 @@ class Summation {
 	<T extends Number> Summation(T arg) {
 		sum = 0;
 
-		for(int i=0; i<= arg.intValie(); i++)
+		for(int i=0; i<= arg.intValue(); i++)
 		       sum += i;
 	}
 
@@ -98,7 +98,7 @@ class ClassGenInt<T> implements Containment<T> {
 //Класс, реализующий обобщенный интерфейс должен быть также обобщенный
 	T[] arrayRef;
 	ClassGenInt(T[] o) {
-		arrayRef = 0;
+		arrayRef = o;
 	}
 	public boolean contains(T o) {
 		for(T x:arrayRef)
@@ -108,9 +108,9 @@ class ClassGenInt<T> implements Containment<T> {
 }
 
 
-class ClassGenInt2 imlements Contaiment<Integer> {
-class ClassGenInt3 <T extends Number> Containment<T> {
-}
+//class ClassGenInt2 imlements Contaiment<Integer> {
+//class ClassGenInt3 <T extends Number> Containment<T> {
+//}
 class pr002 {
 	public static void main(String args[]) {
 		NumFns<Integer> iOb = new NumFns<Integer>(5);
@@ -206,10 +206,12 @@ class pr002 {
 
 		System.out.println();
 		Summation ob2 = new Summation(4);
-		System.out.println("Сумма целых чисел от 0 до 4.0 равна " + ob2.getSum());
+		System.out.println("Сумма целых чисел от 0 до 4 равна " + ob.getSum());
 
+		//Демонстрация использования реализации обобщенного интерфейса
 		System.out.println();
-		Integer x[] = {1,2,3};
+		Integer x10[] = {1,2,3};
+		Double y10[] = {1.0,2.0,3.0};
 
 		ClassGenInt<Integer> ob3 = new  ClassGenInt<Integer>(x10);
 
@@ -225,12 +227,12 @@ class pr002 {
 
 		ClassGenInt<Double> ob4 = new  ClassGenInt<Double>(y10);
 
-		if(ob3.contains(2.0))
+		if(ob4.contains(2.0))
 		        System.out.println("2.0 содержится в ob4");
 		else
 			System.out.println("2.0 не содержится в ob4");
 
-		if(ob3.contains(4.0))
+		if(ob4.contains(4.0))
 			System.out.println("4.0 содержится в ob4");
 		else
 			System.out.println("4.0 не содержится в ob4");
