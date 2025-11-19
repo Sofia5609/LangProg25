@@ -1,4 +1,4 @@
-public class QueueEmptyException extends Exception 
+public class QueueEmptyException extends Exception {
 	public String toString() {
 		return "\nОчередь пуста.";
 	}
