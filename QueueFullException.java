@@ -4,6 +4,6 @@ public class QueueFullException extends Exception {
 		size = s;
 	}
 	public String toString() {
-		return "\nОчередь переполнена. Максимальный размер: " + size + " элементов ";
+		return "\nОчередь переполнена. Максимальный размер: " + size + " элементов.";
 	}
 }
