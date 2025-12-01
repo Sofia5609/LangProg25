@@ -1,0 +1,13 @@
+val four_people = List("Даша", "Ира", "Костя", "Юра")
+val four_people: List[String] = List(Даша, Ира, Костя, Юра)
+
+scala> TCalc.getTPercentage(four_people)
+val res0: I*nt = 10
+
+scala> val six_people: List[String] = List("Коля", "Маша", "Вова", "Егор", "Семен")
+val six_people: List[String] = List(Коля, Маша, Вова, Егор, Семен)
+
+scala> TCalc.getTPercentage(six_people)
+val res1: Int = 20
+
+scala>:q

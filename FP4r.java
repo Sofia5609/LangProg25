@@ -4,7 +4,7 @@ class TCalc {
     private List<String> names = new ArrayList<>();
     private int tPercentage = 0;
     
-    public List<String> addPerson(List<String> names, String name) {
+    public List<String> addPercon(List<String> names, String name) {
 	   List<String> updated = new ArrayList<>(names);
 	   updated.add(name);
            return updated;
@@ -33,14 +33,8 @@ class TCalc {
     }	    
 }
 
-class FP4 {
-	public static void main(String[] args) {
-		TCalc list1 = new TCalc();
-		List<String> l1 = new ArrayList<>();
-		l1 = list1.addPerson(l1, "Ринат");
-		System.out.println("Размер чаевых для l1: " + list1.getTPercentage(l1));
-		List<String> l2 = l1;
-		l2 = list1.addPerson(l1, "Юрий");
-		System.out.println("Размер чаевых для l1: " + list1.getTPercentage(l2));
+class FP4r {
+	public static void main(String[] args] {
+
 	}
 }
