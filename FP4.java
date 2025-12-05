@@ -49,8 +49,7 @@ class FP4 {
 		
 		if (list1.getTPercentage(l3) == 0)
 			System.out.println("Работает правильно");
-		else
-			System.out.println("Ошибка");
+
 		
 		//Список от 1 до 5 человек
 		System.out.println("\nПроверка списка l1");
